@@ -62,12 +62,13 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: looked at the message in the teminal
+  `NameError (uninitialized constant ToysController::Toys):app/controllers/toys_controller.rb:10:in create' `
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: got the error message in console `VM113:1 Uncaught (in promise) SyntaxError: Unexpected end of JSON input` , it means in the update method missing  `render json: toy`
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: when you click the donate button, you would see the message `ActionController::RoutingError (No route matches [DELETE] "/toys/2"): ` in the terminal, it means , we missing route for this `destroy` method in the controller.
